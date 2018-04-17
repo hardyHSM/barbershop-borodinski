@@ -1,0 +1,206 @@
+.page__overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 998;
+  &_open {
+    display: block;
+  }
+}
+
+.modal {
+  display: none;
+  z-index: 999;
+  @include center-align();
+  position: fixed;
+  background-color: $light-bg-color;
+  color: $dark-color;
+  box-shadow: 3px 5px 14px 7px rgba(0, 0, 0, 0.52);
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+  width: 460px;
+  padding-left: 70px;
+  padding-right: 70px;
+  &_open {
+    display: block;
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 320px;
+    top: 135px;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/****************************
+------------MODAL LOGIN ---------
+*****************************/
+
+
+.modal-login {
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+  width: 460px;
+  padding-left: 70px;
+  padding-right: 70px;
+  .modal__close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    right: -76px;
+    top: 63px;
+    border: none;
+    outline: none;
+    &::after, &::before {
+      content: "";
+      top: 0;
+      position: absolute;
+      background-color: $white-color;
+      width: 2px;
+      height: 36px;
+    }
+    &::after {
+      @include left-align();
+      transform: rotate(45deg);
+    }
+    &::before {
+      @include left-align();
+      transform:  rotate(-45deg);
+    }
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.modal__title {
+  font-size: rem(40);
+  font-family: $main-font_bold;
+  text-transform: uppercase;
+  @extend %no-gutters;
+  margin-bottom: 25px;
+  @media screen and (max-width: $tablet-width) {
+    font-size: rem(30);
+    margin-bottom: 10px;
+  }
+}
+
+.modal-login__desc {
+  @extend %no-gutters;
+  font-size: rem(18);
+}
+
+.modal-login__input {
+  width: 100%;
+}
+
+.modal__close_desktop {
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.modal-login__input-wrap {
+  position: relative;
+}
+
+.modal-login__input-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 25px;
+  @include top-align();
+}
+
+.modal-login__checkbox-input {
+  display: none;
+  &:checked + .checkbox-button::after {
+    display: block;
+  }
+  &:focus + .checkbox-button {
+    background-color: $button-active;
+  }
+}
+
+.modal-login__checkbox {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.modal-login__save-me {
+  text-align: left;
+  display: block;
+}
+
+.modal-login__checkbox-title {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: rem(18);
+}
+
+.modal-login__settings-wrap {
+  position: relative;
+  margin-bottom: 33px;
+}
+
+.modal-login__link {
+  text-decoration: underline;
+  font-size: rem(18);
+  position: absolute;
+  @include top-align();
+  right: 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.modal-login__button {
+  width: 100%;
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.modal-login__close-mobile {
+  background-color: transparent;
+}
+
+.modal-success__desc {
+  @extend %no-gutters;
+  font-size: rem(18);
+  margin-bottom: 30px;
+}
+
+.modal-success__button {
+  width: 70%;
+  display: inline-block;
+}
+
+.modal-success {
+  @media screen and (max-width: $tablet-width) {
+    @include center-align();
+    position: fixed;
+  }
+}
+
+
+
+

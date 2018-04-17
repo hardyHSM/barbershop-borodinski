@@ -1,0 +1,44 @@
+.works {
+  position: relative;
+  background-color: $light-bg-color;
+  color: $dark-color;
+  padding: 60px 0px 50px;
+  @media screen and (max-width: $desktop-width) {
+    padding: 55px 0px 100px;
+  }
+  @media screen and (max-width: $desktop-width) {
+    padding: 30px 0px 70px;
+  }
+}
+
+.works__triangle {
+  position: absolute;
+  bottom: 100%;
+  fill: $light-bg-color;
+  height: 65px;
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.works__header {
+  margin-bottom: 70px;
+  @include flex($jc: sb, $ai: c);
+  @media screen and (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.works__list {
+  margin-left: -40px;
+  @include flex();
+  @media screen and (max-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.works__link {
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+}

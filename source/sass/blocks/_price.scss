@@ -1,0 +1,175 @@
+.price {
+  position: relative;
+  color: $white-color;
+  background-color: $dark-color_1;
+  padding: 74px 0px 85px;
+  @media screen and (max-width: $desktop-width) {
+    padding: 40px 0px 54px;
+  }
+  @media screen and (max-width: $desktop-width) {
+    padding: 35px 0px 55px;
+  }
+}
+
+.price__triangle {
+  display: none;
+  @media screen and (max-width: $desktop-width) {
+    display: block;
+    fill: $dark-color_1;
+    position: absolute;
+    bottom: 100%;
+  }
+}
+
+
+.price__header {
+  margin-bottom: 50px;
+}
+
+.price__content {
+  @include flex($wrap: nowrap);
+  @media screen and (max-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.price__right {
+  width: 270px;
+  flex-shrink: 0;
+  margin-left: 60px;
+  border: 1px solid $border-grey;
+  padding: 30px 60px 25px;
+  @media screen and (max-width: $desktop-width) {
+    width: 100%;
+    margin-left: 0;
+    padding: 16px 25px;
+  }
+}
+
+.price__left {
+  flex-grow: 1;
+  @media screen and (max-width: $desktop-width) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.price-list {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  td {
+    border: 1px solid $border-grey;
+    @media screen and (max-width: $tablet-width) {
+      border: none;
+    }
+  }
+  tr {
+    @media screen and (max-width: $tablet-width) {
+      @include flex();
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.price-list__numb {
+  font-size: rem(20);
+  font-family: $main-font;
+  color: $grey-text;
+  padding: 18px 30px;
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.price-list__title {
+  font-size: rem(20);
+  font-family: $main-font_bold;
+  padding: 18px 20px;
+  @media screen and (max-width: $tablet-width) {
+    padding: 0;
+    display: block;
+    margin-bottom: 7px;
+    flex-grow: 1;
+    order: 1;
+    text-align: left;
+  }
+}
+
+.price-list__cond, .price-list__cost {
+  font-size: rem(20);
+  font-family: $main-font;
+  color: $white-color;
+  padding: 18px 20px;
+  @media screen and (max-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.price-list__cond {
+  @media screen and (max-width: $tablet-width) {
+    order: 3;
+    display: block;
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+  }
+}
+
+
+.price-list__cost {
+  width: 150px;
+  @media screen and (max-width: $tablet-width) {
+    width: auto;
+    flex-grow: 1;
+    text-align: right;
+    order: 2;
+    flex-shrink: 0;
+  }
+ }
+
+.price__icon-clock {
+  display: block;
+  margin-bottom: 25px;
+  @media screen and (max-width: $desktop-width) {
+    margin-bottom: 0;
+    width: 75px;
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 60px;
+  }
+}
+
+
+.price__feature-text {
+  text-align: center;
+  @extend %no-gutters;
+  font-size: rem(20);
+  @media screen and (max-width: $desktop-width) {
+    padding-left: 78px;
+    font-size: rem(30);
+    font-family: $main-font_bold;
+  }
+  @media screen and (max-width: $tablet-width) {
+    padding-left: 30px;
+    font-size: rem(20);
+    line-height: 1.6;
+  }
+}
+
+.price__feature {
+  @media screen and (max-width: $desktop-width) {
+    @include flex($ai: c, $wrap: nowrap);
+  }
+}
+
+

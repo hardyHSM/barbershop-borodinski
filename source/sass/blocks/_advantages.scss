@@ -1,0 +1,113 @@
+.advantages {
+  margin-bottom: 105px;
+}
+
+
+.advantages__list {
+  @extend %no-gutters;
+  list-style-type: none;
+  @include flex();
+  @media screen and (max-width: $desktop-width) {
+    display: block;
+  }
+}
+.advantages__item {
+  width: calc(100%/3);
+  padding: 120px 35px 0px;
+  position: relative;
+  box-sizing: border-box;
+  border-right: 1px solid $grey-color;
+  &:last-child {
+    margin-right: 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    @include left-align();
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $desktop-width) {
+      left: 0px;
+      transform: translate(0%,0%);
+      top: 0;
+      @include top-align();
+    }
+    @media screen and (max-width: $tablet-width) {
+      top: 40px;
+      bottom: auto;
+      transform: translate(-50%,0%);
+      left: 50%;
+    }
+  }
+  @media screen and (max-width: $desktop-width) {
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 120px;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid $grey-color;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  @media screen and (max-width: $tablet-width) {
+    padding: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 145px;
+    width: auto;
+    border-bottom: none;
+    &:first-child {
+      padding-top: 145px;
+    }
+  }
+
+}
+.advantages__item_fast {
+  &::before {
+    background-image: url('../img/svg/advantage-1.svg');
+  }
+}
+.advantages__item_cool {
+  &::before {
+    background-image: url('../img/svg/advantage-2.svg');
+  }
+}
+.advantages__item_expensive {
+  &::before {
+    background-image: url('../img/svg/advantage-3.svg');
+  }
+}
+
+.advantages__title {
+  display: block;
+  text-align: center;
+  font-size: rem(30);
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+  @media screen and (max-width: $desktop-width) {
+    text-align: left;
+  }
+  @media screen and (max-width: $tablet-width) {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+.advantages__paragraph {
+  @extend %no-gutters;
+  text-align: center;
+  font-size: rem(20);
+  line-height: 1.3;
+  @media screen and (max-width: $desktop-width) {
+    text-align: left;
+  }
+  @media screen and (max-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}

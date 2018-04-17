@@ -1,0 +1,48 @@
+
+html {
+	font-size: $baseFontSize;
+}
+.page {
+	font-family: $main-font;
+	line-height: 1.2;
+	color: $white-color;
+	font-size: $baseFontSize;
+	background-color: $dark-color_1;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.page__wrapper {
+	overflow: hidden;
+}
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	width: $desktop-width;
+	box-sizing: border-box;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	padding: 0px $gutters-desktop;
+	@media screen and (max-width: $desktop-width) {
+		padding: 0px $gutters-tablet;
+		width: $tablet-width;
+	}
+	@media screen and (max-width: $tablet-width) {
+		padding: 0px $gutters-mobile;
+		width: $mobile-width;
+		min-width: $mobile-width;
+	}
+
+}
+

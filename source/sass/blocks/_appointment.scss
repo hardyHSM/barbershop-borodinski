@@ -1,0 +1,164 @@
+.appointment__triangle {
+	position: absolute;
+	bottom: 100%;
+	fill: $light-bg-color;
+	@media screen and (max-width: $tablet-width) {
+		bottom: 0;
+		fill: $dark-color_4;
+	}
+}
+.appointment {
+	position: relative;
+	background-color: $light-bg-color;
+	color: $dark-color;
+	padding-top: 60px;
+	padding-bottom: 86px;
+}
+.appointment__header {
+	@include flex($jc: sb, $ai: c);
+	margin-bottom: 65px;
+}
+
+.appointment__link {
+	@media screen and (max-width: $tablet-width) {
+		display: none;
+	}
+}
+
+.input {
+	padding: 24px;
+	border: 1px solid $light-border-color;
+	 resize: none;
+	@include placeholder {
+		font-size:  rem(24);
+		color: $dark-color;
+	}
+	&:focus, &:active {
+		outline: none;
+		border: 1px solid $input-focus;
+	}
+	&:hover {
+		border: 1px solid $button-active;
+	}
+}
+
+.appointment-form__section {
+	@extend %no-gutters;
+	border: none;
+	&_data {
+		padding-bottom: 65px;
+	}
+	&_model {
+		padding-bottom: 50px;
+	}
+}
+
+.appointment-form__row {
+	@include flex($jc: sb);
+	margin: 0px;
+	margin-bottom: 35px;
+}
+
+
+
+.appointment-form__input_col-3 {
+	width: calc(100% /  3 - 20px);
+	@media screen and (max-width: $desktop-width) {
+		width: calc(100% / 3);
+	}
+	@media screen and (max-width: $tablet-width) {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+.appointment-form__input_col-2 {
+	width: calc(100% /  2 - 20px);
+	@media screen and (max-width: $desktop-width) {
+		width: 100%;
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+} 
+.appointment-form__input_area {
+	width: 100%;
+	height: 210px;
+}
+
+.appointment-form__caption-wrapper {
+	width: 100%;
+	display: block;
+	margin-bottom: 50px;
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: $light-border-color;
+		height: 1px;
+		position: absolute;
+		top: 53%;
+		z-index: 4;
+	}
+}
+
+.appointment-form__caption {
+	text-align: center;
+	font-size:  rem(30);
+	font-family:  $main-font;
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+	span {
+		width: auto;
+		padding: 0px 30px;
+		display: inline-block;
+		background-color: $light-bg-color;
+	}
+}
+
+.appointment-form__section_data {
+	padding-bottom: 70px;
+}
+
+.appointment-form__select {
+	text-align: center;
+	width: 90px;
+	@media screen and (max-width: $desktop-width) {
+		width: 75px
+	}
+	@media screen and (max-width: $tablet-width) {
+		width: 33.333%;
+		margin-bottom: 30px;
+	}
+}
+
+
+.select-model__button {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.select-model__title {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: rem(24);
+	font-family: $main-font;
+}
+
+.appointment-form__button {
+	width: 100%;
+	font-size: rem(24);
+}
+
+.appointment-form__section_model {
+	@media screen and (max-width: $tablet-width) {
+		.appointment-form__row {
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+	}
+}

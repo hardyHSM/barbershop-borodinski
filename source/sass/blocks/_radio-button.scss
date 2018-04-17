@@ -1,0 +1,54 @@
+.select-model__radio {
+  display: none;
+  &:checked + .radio-button {
+    &::after {
+      display: block;
+    }
+  }
+  &:checked:active + .radio-button{
+    background-color: $light-border-color;
+    &::after {
+      display: none;
+    }
+  }
+  &:focus + .radio-button {
+    background-color: $light-border-color;
+    &::after {
+      display: block;
+      background-color: $white-color;
+    }
+  }
+}
+
+
+
+.radio-button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $light-border-color;
+  background-color: $white-color;
+  position: relative;
+  transition: all .1s;
+  &::after {
+    content: "";
+    display: none;
+    border: 2px solid $light-border-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transtition: all .3s;
+    @include center-align();
+  }
+  &:hover {
+    border: 2px solid $light-border-color;
+  }
+  &:active {
+    background-color: $light-border-color;
+    &::after {
+      display: block;
+      background-color: $white-color;
+    }
+  }
+}

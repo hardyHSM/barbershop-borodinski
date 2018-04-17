@@ -1,0 +1,68 @@
+.checkbox-button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  border: 1px solid $light-border-color;
+  position: relative;
+  transition: all .2s;
+  &:hover {
+    border: 1px solid $button-active;
+  }
+  &:active  {
+    background-color: $button-active;
+  }
+}
+
+.appointment-form__row_add-service {
+  margin-bottom: 35px;
+}
+
+.appointment-form__service {
+  margin-right: 55px;
+  width: calc(100% / 3 - 55px);
+  margin-bottom: 45px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  @media screen and (max-width: $desktop-width) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    width: calc(50% - 55px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+
+
+.select-service__title {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-size: rem(24);
+}
+
+.select-service__checkbox-input {
+  display: none;
+  &:checked + .checkbox-button::after {
+    display: block;
+  }
+  &:focus + .checkbox-button {
+    background-color: $button-active;
+  }
+}
+
+.checkbox-button::after {
+  content: "";
+  display: none;
+  @include center-align();
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/svg/yes.svg");
+  background-size: cover;
+}

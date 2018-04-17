@@ -1,0 +1,90 @@
+.button {
+  display: inline-block;
+  background-color: none;
+  outline: none;
+  border: none;
+  padding: 17px 30px;
+  border: 1px solid $light-border-color;
+  font-size: rem(18);
+  text-transform: uppercase;
+  font-family: $main-font_bold;
+  transition: all .1s;
+  &:hover {
+    border: 1px solid $button-hover;
+  }
+  &:active {
+    background-color: $button-hover;
+    opacity: 0.7;
+  }
+}
+
+.button_theme_accent {
+  background-color: $accent-color;
+  color: $white-color;
+  &:hover {
+    background-color: $accent-hover;
+  }
+  &:active {
+    color: rgba($accent-color, 0.6);
+  }
+}
+
+
+.button_border-transparent {
+  border: 1px solid $icon-border-color;
+  &:hover {
+    border: 1px solid lighten($icon-border-color, 25%);
+  }
+  &:active {
+    border: 1px solid transparent;
+    opacity: 0.7;
+    background-color: transparent;
+  }
+}
+.copyright__title {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-login__mobile-buttons {
+  display: none;
+  @media screen and (max-width: $tablet-width) {
+    @include flex($jc: sb);
+  }
+}
+
+.modal-login__login-mobile {
+  width: calc(50% - 7px);
+}
+
+.modal-login__close-mobile {
+  width: calc(50% - 7px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
